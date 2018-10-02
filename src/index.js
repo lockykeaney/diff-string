@@ -1,19 +1,5 @@
 console.log('Mutation String Generator')
 
-const diffObjects = (oldObject, newObject) => {
-    let diff = Object.keys(newObject).reduce((diff, key) => {
-        if (oldObject[key] === newObject[key]) {
-            return diff
-        }
-        return {
-            ...diff,
-            [key]: newObject[key]
-        }
-    }, {})
-
-    return isEmpty(diff)
-}
-
 const updateString = (obj) => {
 
     let array = []
@@ -43,4 +29,19 @@ const isEmpty = (obj) => {
     return false;
 }
 
-module.exports = diffObjects
+const diffObjects = (oldObject, newObject) => {
+    let diff = Object.keys(newObject).reduce((diff, key) => {
+        if (oldObject[key] === newObject[key]) {
+            return diff
+        }
+        return {
+            ...diff,
+            [key]: newObject[key]
+        }
+    }, {})
+
+    return isEmpty(diff)
+}
+
+export default diffObjects
+// module.exports = diffObjects

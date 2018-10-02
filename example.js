@@ -1,4 +1,4 @@
-const diffs = require('./src')
+import functionChain from './src'
 
 const obj1 = {
     name: 'Mark',
@@ -8,12 +8,12 @@ const obj1 = {
 }
 
 const obj2 = {
-    name: 'Mark',
+    name: 'Steve',
     role: 'Builder',
-    available: false,
-    jobs: 3
+    available: true,
+    jobs: 2
 }
 
-const x = diffs(obj1, obj2)
 
-console.log(x)
+const chain = functionChain(obj1, obj2)
+console.log(chain)

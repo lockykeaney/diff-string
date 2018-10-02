@@ -1,0 +1,13 @@
+{
+    "name": "diffString",
+    "version": "0.0.1",
+    "main": "src/index.js",
+    "license": "MIT",
+    "homepage": "",
+    "author": "Locky Keaney <lockykeaney@protonmail.com>",
+    "dependencies": {
+        "babel-core": "^6.26.3",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-register": "^6.26.0"
+    }
+}

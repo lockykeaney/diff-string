@@ -1,21 +1,24 @@
 {
-    "name": "diffString",
+    "name": "diff-string",
     "version": "0.0.1",
-    "main": "src/index.js",
     "license": "MIT",
     "homepage": "https://github.com/lockykeaney/diffString",
     "author": "Locky Keaney <lockykeaney@protonmail.com>",
+    "main": "dist/diff-string.js",
+    "module": "dist/diff-string.mjs",
+    "jsnext:main": "dist/diff-string.mjs",
     "scripts": {
-        "test": "mocha --compilers js:babel-core/register test",
-        "start": "babel-node example.js"
+        "test": "mocha --compilers js:@babel/register",
+        "start": "npx babel example.js",
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
     },
-    "dependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.3",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-preset-env": "^1.7.0",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-register": "^6.26.0",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/cli": "^7.1.2",
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "@babel/register": "^7.0.0",
         "chai": "^4.2.0",
         "mocha": "^5.2.0"
     }

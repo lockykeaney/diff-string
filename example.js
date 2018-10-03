@@ -1,4 +1,4 @@
-import functionChain from './src'
+import diffObjects from './src'
 
 const obj1 = {
     name: 'Mark',
@@ -15,5 +15,5 @@ const obj2 = {
 }
 
 
-const chain = functionChain(obj1, obj2)
-console.log(chain)
+const output = diffObjects(obj1, obj2)
+console.log(output)
